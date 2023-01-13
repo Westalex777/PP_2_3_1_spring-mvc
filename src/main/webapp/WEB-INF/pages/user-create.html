@@ -2,19 +2,16 @@
 <html lang="en" xmlns:form="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>User form</title>
+    <title>User create form</title>
 </head>
 <body>
 <p></p>
-
-
-<form th:action="${toController}" th:object="${user}" method="get">
-    <input type="hidden" th:field="*{id}" id="id">
+<form th:action="@{'/addUser'}" th:object="${user}" method="get">
     <table border="0" width="12%">
         <tr>
             <td></td>
             <td align="center">
-                <p><b>User Form</b></p>
+                <p><b>User Create Form</b></p>
             </td>
         </tr>
         <tr>
@@ -37,13 +34,10 @@
         <tr>
             <td></td>
             <td align="center" >
-                <input type="submit" th:value="${buttonName}"><input type="reset" value="Reset" name="B2">
+                <input type="submit" value="Add"><input type="reset" value="Reset" name="B2">
             </td>
         </tr>
     </table>
 </form>
-
-
-
 </body>
 </html>
