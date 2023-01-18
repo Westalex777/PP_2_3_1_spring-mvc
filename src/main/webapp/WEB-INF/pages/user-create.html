@@ -6,7 +6,7 @@
 </head>
 <body>
 <p></p>
-<form th:action="@{'/addUser'}" th:object="${user}" method="get">
+<form th:action="@{/addUser(user=${user})}" th:object="${user}" method="post">
     <table border="0" width="12%">
         <tr>
             <td></td>
